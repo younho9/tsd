@@ -18,6 +18,7 @@
 	"scripts": {
 		"prepublishOnly": "npm run build",
 		"pretest": "npm run build && cpy \"./**/**\" \"../../../dist/test/fixtures/\" --parents --cwd=source/test/fixtures",
+		"prepare": "npm run build",
 		"test": "npm run lint && ava",
 		"build": "npm run clean && tsc --project tsconfig.tsd.json && chmod +x dist/cli.js",
 		"clean": "del-cli dist",
